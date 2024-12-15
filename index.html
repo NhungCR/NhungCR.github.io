@@ -13,7 +13,7 @@
     <!-- <script src="https://assets.codepen.io/16327/MorphSVGPlugin3.min.js"></script> -->
 </head>
 
-<body> 
+<body>
     <audio src="./jingle_bells.mp3" preload="auto" loop autoplay></audio>
     <button id="volume">
         <i class="fas fa-volume-mute"></i>
@@ -121,7 +121,7 @@
                     fill="#ffff00" />
             </g>
             <circle class="sparkle" fill="url(#dotGrad)" cx="0" cy="0" r="50" />
-            <g class="messageText" opacity="100">
+            <g class="messageText">
                 <text class="merryTextBg " x="50%" y="622">
                     <textPath xlink:href="#merryTextBg">Merry Christmas</textPath>
                 </text>
@@ -183,7 +183,34 @@
 
     <div id="snow"></div>
 
-	<div class="snowman"></div>
+    <div class="snowman"></div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const name = params.get('name') || 'NhunCR';
+        const fromChrisText = document.querySelector('.fromChrisText textPath');
+        fromChrisText.textContent = name;
+    </script>
+
+    <script>
+        const volume = document.querySelector("#volume");
+        const icon = document.querySelector("#volume > i");
+        const audio = document.querySelector("audio");
+
+        volume.addEventListener("click", () => {
+            if (audio.paused) {
+                audio.play();
+                icon.classList.remove('fa-volume-mute');
+                icon.classList.add('fa-volume-up');
+
+            } else {
+                audio.pause();
+                icon.classList.remove('fa-volume-up');
+                icon.classList.add('fa-volume-mute');
+            }
+        });
+    </script>
+
     <script src="script.js"></script>
 
 </body>
