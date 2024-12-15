@@ -1,4 +1,4 @@
-MorphSVGPlugin.convertToPath("polygon");
+// MorphSVGPlugin.convertToPath("polygon");
 
 const volume = document.querySelector("#volume");
 const icon = document.querySelector("#volume > i");
