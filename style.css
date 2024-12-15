@@ -1,0 +1,302 @@
+@font-face {
+	font-family: 'mountains_of_christmasregular';
+	src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/35984/mountainsofchristmas-webfont.woff2') format('woff2'),
+		url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/35984/mountainsofchristmas-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+
+}
+
+body {
+	background-color: #151522;
+	overflow: hidden;
+	text-align: center;
+}
+
+body,
+html {
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+
+svg {
+	width: 100%;
+	height: 100%;
+	visibility: hidden;
+
+}
+
+.merryText,
+.merryTextBg,
+.fromChrisText {
+	font-family: 'Bad Script';
+	fill: #fffcf9;
+	text-anchor: middle;
+	font-size: 3.64em;
+	overflow: hidden;
+	white-space: nowrap;
+	margin: 0 auto;
+	letter-spacing: .15em;
+}
+
+.merryTextBg {
+	stroke: #C89568;
+	fill: transparent;
+	stroke-width: 3;
+	text-anchor: middle;
+	font-size: 3.64em;
+}
+
+.fromChrisText {
+	font-size: 1.64em;
+	/* fill: #C89568; */
+}
+
+.snowman {
+	background: url("https://ismailvtl-images-project.vercel.app/snowman-min.png?raw=true") no-repeat 0 bottom/100%;
+	height: 140px;
+	width: 155px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	opacity: 0.75;
+	animation: appear 20s;
+}
+
+#volume {
+	font-size: 16px;
+	color: #eee;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	transform: translate(-50%, -50%);
+	width: 50px;
+	padding: 15px;
+	border: none;
+	border-radius: 2px;
+	outline: none;
+	background: rgba(115, 67, 167, 0.8);
+	box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+	opacity: 0.2;
+	cursor: pointer;
+	transition: all 0.4s ease-out;
+	z-index: 10000;
+}
+
+#volume:hover {
+	opacity: 0.8;
+}
+
+#snow {
+	background: none;
+	z-index: 200;
+	background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/191814/flake1.png"),
+		url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/191814/flake2.png"),
+		url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/191814/flake3.png");
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	-webkit-animation: snow 10s linear infinite;
+	-moz-animation: snow 10s linear infinite;
+	-ms-animation: snow 10s linear infinite;
+	animation: snow 10s linear infinite;
+}
+
+.lightrope {
+	text-align: center;
+	white-space: nowrap;
+	overflow: hidden;
+	position: absolute;
+	z-index: 1;
+	margin: -15px 0 0 0;
+	padding: 0;
+	pointer-events: none;
+	width: 100%;
+	top: 0;
+}
+
+.lightrope li {
+	position: relative;
+	animation-fill-mode: both;
+	animation-iteration-count: infinite;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: block;
+	width: 12px;
+	height: 28px;
+	border-radius: 50%;
+	margin: 20px;
+	display: inline-block;
+	background: rgba(0, 247, 165, 1);
+	box-shadow: 0px 4.66667px 24px 3px rgba(0, 247, 165, 1);
+	animation-name: flash-1;
+	animation-duration: 2s;
+}
+
+.lightrope li:nth-child(2n+1) {
+	background: rgba(0, 255, 255, 1);
+	box-shadow: 0px 4.66667px 24px 3px rgba(0, 255, 255, 0.5);
+	animation-name: flash-2;
+	animation-duration: 0.4s;
+}
+
+.lightrope li:nth-child(4n+2) {
+	background: rgba(247, 0, 148, 1);
+	box-shadow: 0px 4.66667px 24px 3px rgba(247, 0, 148, 1);
+	animation-name: flash-3;
+	animation-duration: 1.1s;
+}
+
+.lightrope li:nth-child(odd) {
+	animation-duration: 1.8s;
+}
+
+.lightrope li:nth-child(3n+1) {
+	animation-duration: 1.4s;
+}
+
+.lightrope li:before {
+	content: "";
+	position: absolute;
+	background: #222;
+	width: 10px;
+	height: 9.33333px;
+	border-radius: 3px;
+	top: -4.66667px;
+	left: 1px;
+}
+
+.lightrope li:after {
+	content: "";
+	top: -14px;
+	left: 9px;
+	position: absolute;
+	width: 52px;
+	height: 18.6667px;
+	border-bottom: solid #222 2px;
+	border-radius: 50%;
+}
+
+.lightrope li:last-child:after {
+	content: none;
+}
+
+.lightrope li:first-child {
+	margin-left: -40px;
+}
+
+@keyframes flash-1 {
+
+	0%,
+	100% {
+		background: rgba(0, 247, 165, 1);
+		box-shadow: 0px 4.66667px 24px 3px rgba(0, 247, 165, 1);
+	}
+
+	50% {
+		background: rgba(0, 247, 165, 0.4);
+		box-shadow: 0px 4.66667px 24px 3px rgba(0, 247, 165, 0.2);
+	}
+}
+
+@keyframes flash-2 {
+
+	0%,
+	100% {
+		background: rgba(0, 255, 255, 1);
+		box-shadow: 0px 4.66667px 24px 3px rgba(0, 255, 255, 1);
+	}
+
+	50% {
+		background: rgba(0, 255, 255, 0.4);
+		box-shadow: 0px 4.66667px 24px 3px rgba(0, 255, 255, 0.2);
+	}
+}
+
+@keyframes flash-3 {
+
+	0%,
+	100% {
+		background: rgba(247, 0, 148, 1);
+		box-shadow: 0px 4.66667px 24px 3px rgba(247, 0, 148, 1);
+	}
+
+	50% {
+		background: rgba(247, 0, 148, 0.4);
+		box-shadow: 0px 4.66667px 24px 3px rgba(247, 0, 148, 0.2);
+	}
+}
+
+
+@keyframes snow {
+	0% {
+		background-position: 0px 0px, 0px 0px, 0px 0px;
+	}
+
+	50% {
+		background-position: 500px 500px, 100px 200px, -100px 150px;
+	}
+
+	100% {
+		background-position: 500px 1000px, 200px 400px, -100px 300px;
+	}
+}
+
+@-moz-keyframes snow {
+	0% {
+		background-position: 0px 0px, 0px 0px, 0px 0px;
+	}
+
+	50% {
+		background-position: 500px 500px, 100px 200px, -100px 150px;
+	}
+
+	100% {
+		background-position: 400px 1000px, 200px 400px, 100px 300px;
+	}
+}
+
+@-webkit-keyframes snow {
+	0% {
+		background-position: 0px 0px, 0px 0px, 0px 0px;
+	}
+
+	50% {
+		background-position: 500px 500px, 100px 200px, -100px 150px;
+	}
+
+	100% {
+		background-position: 500px 1000px, 200px 400px, -100px 300px;
+	}
+}
+
+@-ms-keyframes snow {
+	0% {
+		background-position: 0px 0px, 0px 0px, 0px 0px;
+	}
+
+	50% {
+		background-position: 500px 500px, 100px 200px, -100px 150px;
+	}
+
+	100% {
+		background-position: 500px 1000px, 200px 400px, -100px 300px;
+	}
+}
+
+@keyframes appear {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
