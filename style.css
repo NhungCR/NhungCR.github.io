@@ -67,6 +67,13 @@ svg {
 	animation: appear 20s;
 }
 
+@media screen and (max-width: 768px) {
+	.snowman {
+		width: 80px;
+		height: 88px;
+	}
+}
+
 #volume {
 	font-size: 16px;
 	color: #eee;
