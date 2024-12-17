@@ -4,7 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/lightrope.css">
+    <link rel="stylesheet" href="./styles/sign-style.css">
+    <link rel="stylesheet" href="./styles/snow-style.css">
+    <link rel="stylesheet" href="./styles/snowman-style.css">
+    <link rel="stylesheet" href="./styles/volume-style.css">
     <link href="https://fonts.googleapis.com/css?family=Bad+Script" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <title>Document</title>
@@ -38,7 +43,7 @@
                 <stop offset="0.9" style="stop-color:#FEE8C7" />
                 <stop offset="1" style="stop-color:red" />
             </radialGradient>
-            <radialGradient id="dotGrad" cx="0" cy="0" r="50" gradientUnits="userSpaceOnUse">
+            <radialGradient id="dotGrad" cx="0" cy="0" r="80" gradientUnits="userSpaceOnUse">
                 <stop offset="0" style="stop-color:#FFFFFF;stop-opacity:1" />
                 <stop offset="0.1" style="stop-color:#0867C7;stop-opacity:0.6" />
                 <stop offset="1" style="stop-color:#081029;stop-opacity:0" />
@@ -100,18 +105,6 @@
             <path class="treePot" mask="url(#treePotMask)"
                 d="M374.32,502.55a48.15,48.15,0,0,0,1.24,14.35c1.15,4.52,3.29,8.64,6.49,11.35a18.5,18.5,0,0,0,5.51,3.14,39.06,39.06,0,0,0,6.41,1.82,65.78,65.78,0,0,0,13.68,1.12,72.9,72.9,0,0,0,13.72-1.44,44.51,44.51,0,0,0,6.46-1.85,17.75,17.75,0,0,0,5.51-3.15,25.45,25.45,0,0,0,7.24-11.17,52,52,0,0,0,1.9-6.91c.48-2.37.83-4.8,1.18-7.25a55.16,55.16,0,0,1,.64,7.42,40.11,40.11,0,0,1-.52,7.56,31.23,31.23,0,0,1-2.19,7.5,24.37,24.37,0,0,1-4.46,6.79,25.16,25.16,0,0,1-6.61,5,39.72,39.72,0,0,1-7.4,3A58.55,58.55,0,0,1,407.75,542a55,55,0,0,1-15.47-1.9,36.65,36.65,0,0,1-7.46-3,25.3,25.3,0,0,1-6.6-5,19.63,19.63,0,0,1-2.5-3.34,21.72,21.72,0,0,1-1.79-3.67,27.66,27.66,0,0,1-1.65-7.7,38.16,38.16,0,0,1,2-14.87Z"
                 fill="#33cc33" />
-            <path id="merryTextBg">
-                <animate attributeName="d" from="m0,622 h0" to="m0,622 h1100" dur="5s" begin="5s" repeatCount="1"
-                    fill="freeze" />
-            </path>
-            <path id="merryText">
-                <animate attributeName="d" from="m0,620 h0" to="m0,620 h1100" dur="5s" begin="5s" repeatCount="1"
-                    fill="freeze" />
-            </path>
-            <path id="fromChrisText">
-                <animate attributeName="d" from="m0,670 h0" to="m0,670 h1100" dur="5s" begin="7s" repeatCount="1"
-                    fill="freeze" />
-            </path>
             <g class="treeStar">
                 <path class="treeStarOutline" opacity="0"
                     d="M421,53.27c5,.83,10.08,1.52,15.15,2.13l3.8.45,1.9.21c.33,0,.6.06,1,.12a2.41,2.41,0,0,1,1.27.66,2.52,2.52,0,0,1,.56,2.76,3.42,3.42,0,0,1-.78,1.07l-.66.69-2.65,2.77c-1.78,1.83-3.54,3.68-5.35,5.48l-2.7,2.71L429.81,75l-.69.67-.34.33,0,0h0a.14.14,0,0,0,0-.08s0-.07,0,0l0,.24.07.47.57,3.78c.4,2.52.71,5,1.06,7.57l.94,7.59.22,1.9c0,.06,0,.19,0,.34a2.21,2.21,0,0,1,0,.43,2.72,2.72,0,0,1-.21.84,2.85,2.85,0,0,1-2.65,1.75,2.57,2.57,0,0,1-.82-.14,3.12,3.12,0,0,1-.65-.3l-1.64-1-6.58-3.91-6.63-3.81-3.34-1.86-.42-.23-.21-.12-.14-.07a1,1,0,0,0-.59,0,1.15,1.15,0,0,0-.31.12l-.43.22-.85.44c-2.27,1.17-4.54,2.31-6.79,3.52s-4.51,2.38-6.74,3.61l-3.36,1.83-.84.46a3.07,3.07,0,0,1-1.28.44,2.68,2.68,0,0,1-2.84-3l.15-1,.29-1.89.57-3.78,1.18-7.56,1.24-7.52a.13.13,0,0,0,0,.08l0,0-.1-.09-.17-.17-1.37-1.34-2.73-2.68-10.93-10.7-.34-.33a4,4,0,0,1-.64-.84,3.63,3.63,0,0,1-.43-2.12,3.68,3.68,0,0,1,2.64-3.17l.52-.11.25,0,.47-.06.95-.12,1.9-.25,7.58-1,7.6-.9,1.9-.23.95-.11c.24,0,.11,0,.09,0l-.09.05-.07.08,0,0,.09-.16.46-.84.91-1.68c2.41-4.5,4.95-8.92,7.51-13.34l1-1.66.48-.83.24-.41.13-.23a3.49,3.49,0,0,1,.22-.33,2.66,2.66,0,0,1,2.83-.9,2.52,2.52,0,0,1,1.26.84,2.85,2.85,0,0,1,.37.62l.18.44q1.45,3.54,3,7.06c1,2.36,2,4.68,3.06,7,.51,1.17,1.06,2.32,1.59,3.48l.8,1.74a2.12,2.12,0,0,0,.45.75A1.42,1.42,0,0,0,421,53.27Zm-.06.39a1.82,1.82,0,0,1-1-.46,2.52,2.52,0,0,1-.56-.86l-.84-1.72c-.56-1.14-1.11-2.3-1.69-3.43-1.17-2.27-2.29-4.56-3.5-6.81s-2.39-4.51-3.6-6.76l-.23-.42a.8.8,0,0,0-.14-.18.58.58,0,0,0-.33-.15.56.56,0,0,0-.57.28L407,36.48c-2.09,4.66-4.2,9.31-6.45,13.88l-.83,1.72-.42.86-.13.27a3.57,3.57,0,0,1-2,1.67,4.26,4.26,0,0,1-.84.18l-.95.13-1.89.27L386,56.53l-7.58,1-3.49.44a.45.45,0,0,0,.34-.4.51.51,0,0,0-.07-.28s-.06-.08-.07-.08l.33.34,10.65,11,2.66,2.75,1.33,1.37.4.42a3.41,3.41,0,0,1,.53.84,3.36,3.36,0,0,1,.24,1.95c-.53,2.56-1,5-1.57,7.52L388,90.85l-.83,3.73-.42,1.87-.2.9a.5.5,0,0,0,0,.3.58.58,0,0,0,.52.37,6.28,6.28,0,0,0,1.38-.58l3.46-1.62q3.47-1.61,6.9-3.3c2.3-1.1,4.57-2.26,6.85-3.39l.86-.43.43-.21a2.55,2.55,0,0,1,.57-.22,2.21,2.21,0,0,1,1.29.08l.29.13.21.11.42.23,3.37,1.81,6.8,3.51,6.85,3.41,1.71.85c.19.09.15.07.22.08a.25.25,0,0,0,.12,0,.42.42,0,0,0,.21-.1.33.33,0,0,0,.1-.19.2.2,0,0,0,0-.09.1.1,0,0,0,0,0l0-.13L428.74,96l-1.42-7.52c-.43-2.51-.9-5-1.29-7.54l-.6-3.78-.08-.47,0-.24a3.75,3.75,0,0,1,0-.45,3.37,3.37,0,0,1,.52-1.9,3.33,3.33,0,0,1,.3-.4,3.73,3.73,0,0,1,.3-.3l.35-.32.7-.65,2.81-2.59,2.86-2.54c1.9-1.71,3.84-3.36,5.77-5l2.91-2.49a12.91,12.91,0,0,0,1.15-1,.7.7,0,0,0-.06-.79.73.73,0,0,0-.37-.26c-.23-.06-.6-.13-.89-.2l-1.87-.4L436,56.39C431,55.39,426,54.45,420.95,53.66Z"
@@ -121,17 +114,6 @@
                     fill="#ffff00" />
             </g>
             <circle class="sparkle" fill="url(#dotGrad)" cx="0" cy="0" r="50" />
-            <g class="messageText">
-                <text class="merryTextBg " x="50%" y="622">
-                    <textPath xlink:href="#merryTextBg">Merry Christmas</textPath>
-                </text>
-                <text class="merryText" x="50%" y="620">
-                    <textPath xlink:href="#merryText">Merry Christmas</textPath>
-                </text>
-                <text class="fromChrisText" x="50%" y="670">
-                    <textPath xlink:href="#fromChrisText">NhunCR</textPath>
-                </text>
-            </g>
         </g>
     </svg>
 
@@ -184,34 +166,20 @@
     <div id="snow"></div>
 
     <div class="snowman"></div>
+    <div class="sign">
+        <div class="merry">
+            <span class="fast-flicker">Mer</span>ry&nbsp;
+            <span class="flicker">Chirst</span>mas
+        </div>
+        <div class="name">
+            NhunCR
+        </div>
+        
+    </div>
 
-    <script>
-        const params = new URLSearchParams(window.location.search);
-        const name = params.get('name') || 'NhunCR';
-        const fromChrisText = document.querySelector('.fromChrisText textPath');
-        fromChrisText.textContent = name;
-    </script>
 
-    <script>
-        const volume = document.querySelector("#volume");
-        const icon = document.querySelector("#volume > i");
-        const audio = document.querySelector("audio");
-
-        volume.addEventListener("click", () => {
-            if (audio.paused) {
-                audio.play();
-                icon.classList.remove('fa-volume-mute');
-                icon.classList.add('fa-volume-up');
-
-            } else {
-                audio.pause();
-                icon.classList.remove('fa-volume-up');
-                icon.classList.add('fa-volume-mute');
-            }
-        });
-    </script>
-
-    <script src="script.js"></script>
+    <script src="./scripts/volume.js"></script>
+    <script src="./scripts/script.js"></script>
 
 </body>
 
